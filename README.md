@@ -2,6 +2,10 @@
 
 Assorted problems and tools from HackerRank, CodeForces, LeetCode
 
+The `Makefile` uses `inotifywait` which is part of `inotify-tools`.
+Detailed installation found at [inotify-tools](https://github.com/rvoicilas/inotify-tools/wiki).
+
+
 
 #### Some Useful Git Commands
 

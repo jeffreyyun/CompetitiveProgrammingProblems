@@ -1,8 +1,10 @@
-# Written by Jennie Zheng. Modified by Haoyu Yun. \
-
 # Makefile for: \
 	Automated execution of code upon change. \
 	Faster pushing changes to repo. \
+
+# Requires inotifywait, part of inotify-tools (Debian/Ubuntu: apt-get install inotify-tools)
+
+# Written by Jennie Zheng. Modified by Haoyu Yun. \
 
 # Example: make script="a.py"
 default:
