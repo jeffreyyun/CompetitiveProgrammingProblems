@@ -1,4 +1,10 @@
-#Example: make script="a.py"
+# Written by Jennie Zheng. Modified by Haoyu Yun. \
+
+# Makefile for: \
+	Automated execution of code upon change. \
+	Faster pushing changes to repo. \
+
+# Example: make script="a.py"
 default:
 	make run;
 	make watch --silent;
@@ -15,7 +21,7 @@ run:
 	python3 $(script);
 
 push:
-	git add *
+	git add .
 	echo -n "Message: "
 	read msg; \
 	echo "git commit -am" $$msg; \
