@@ -5,6 +5,7 @@
 # Requires inotifywait, part of inotify-tools (Debian/Ubuntu: apt-get install inotify-tools)
 
 # Written by Jennie Zheng. Modified by Haoyu Yun. \
+# Modified: 2017 Sep 23
 
 # Example: make script="a.py"
 default:
