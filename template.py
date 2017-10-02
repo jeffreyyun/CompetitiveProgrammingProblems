@@ -1,33 +1,24 @@
 #!/bin/python3
-
-
 fin = open('A.in', 'r')
 fout = open('A.out', 'w')
 
+
+
 class Solution(object):
-	def integerBreak(self, num):
-		"""
-		:type n: int
-		:rtype: int
-		"""
-		dp = [0 for i in range(num+1)]
-		a = 1
-		for n in range(num+1):
+    def __init__(self):
+        pass
 
-			a1 = pow(a,n//a-n%a) * pow(a+1,n%a)
-			a2 = pow(a+1,n//(a+1)-n%(a+1)) * pow(a+2,n%(a+1)) if (n//(a+1) >> 1) else 0
-			a += (a2 > a1)
-			dp[n] = max(a1, a2)
+    def FUNCTION(self):
+        return "Hello ICPC"
 
-		return dp[num]
-        
-                              
 
 sol = Solution()
-inp = 2
-r = sol.integerBreak(inp)
+inp = [1,0,1,3,4,7]
+ppp = sol.FUNCTION(inp)
 
-print(r)
+print(ppp)
+
+
 
 fin.close()
 fout.close()

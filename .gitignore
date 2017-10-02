@@ -1,5 +1,4 @@
 # .gitignore file
 
-folder_gitignored
-*_gitignored
-new.py
+acm_icpc
+_cpp/temp*

@@ -89,18 +89,20 @@ inline void CLOSE () {
 
 // =========== END OF TEMPLATE ==============
 
-int q;
-
 int main()
 {
     // faster I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
+    int TC, a, b;
     scanf("%d", &q);
-    TC(q)
+    while (TC--)    // do for each test case
     {
-        // do for each test case
+        scanf("%d %d", &a, &b);
+
+
+        printf("%d\n", someIntResult);
 
     }
 }
