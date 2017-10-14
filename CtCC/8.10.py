@@ -1,9 +1,6 @@
 #!/bin/python3
-import math
-import copy
 import time
 import queue
-from collections import Counter
 
 def paintFill(a, x, y, newColor):
     X, Y = len(a), len(a[0])    # assumes valid grid
