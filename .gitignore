@@ -2,3 +2,7 @@
 
 acm_icpc
 _cpp/temp*
+*.in
+*.out
+*/*.in
+*/*.out
