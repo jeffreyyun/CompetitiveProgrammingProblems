@@ -9,12 +9,13 @@ def paintFill(a, x, y, newColor):
     q.put((x,y))
     while not q.empty():
         x,y = q.get()
-        a[x][y] = newColor
+        a[x][y] = newColor      # change the color
         for dx,dy in [(-1,0),(1,0),(0,-1),(0,1)]:
-            if x+dx >= 0 and y+dy >= 0 and x+dx < X and y+dy < Y and a[x+dx][y+dy] == origColor:
+            if x+dx < 0 or y+dy < 0 or x+dx >= X or y+dy >= Y:  # bounds check
+                continue
+            elif a[x+dx][y+dy] == origColor:
                 q.put((x+dx,y+dy))
     return a
-
 
 def test(inp, case=1):
 

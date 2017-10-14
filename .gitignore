@@ -2,6 +2,7 @@
 
 acm_icpc
 _cpp/temp*
+new.py
 *.in
 *.out
 */*.in
