@@ -1,6 +1,5 @@
 # .gitignore file
 
-acm_icpc
 _cpp/temp*
 new.py
 *.in
