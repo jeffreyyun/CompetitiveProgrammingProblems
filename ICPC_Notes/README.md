@@ -1,3 +1,5 @@
 # README
 
-bloomberg_x - from Bloomberg CodeCon (Oct 19 2020) - 4th place out of 78 participants (UCLA)
+Bloomberg_CodeCon - from UCLA Bloomberg CodeCon (2017 Oct 19) - Rank 4 of 78 participants
+
+icpc_kattis - UCLA ACM ICPC Tryouts 2 (2017 Oct 18) - Rank 13 of 38

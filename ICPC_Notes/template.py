@@ -1,10 +1,13 @@
 #!/bin/python3
-import time
+
 import math
 import queue
 import collections
 from collections import Counter
 
+fin, fout = open(FNAME + ".in", "r"), open(FNAME + ".out", "w")
+sys.stdin = fin
+sys.stdout = fout
 
 class Solution(object):
     def __init__(self):
@@ -20,17 +23,14 @@ ppp = sol.FUNCTION(inp)
 print(ppp)
 
 
-inps = ["Hello"]
+# inps = ["Hello"]
 
-for inp in inps:
-    start_time = time.time()
-    test(inp, 1)
-    t1 = time.time() - start_time
-    print(t1)
+# for inp in inps:
+#     start_time = time.time()
+#     test(inp, 1)
+#     t1 = time.time() - start_time
+#     print(t1)
 
 
-
-fin = open('A.in', 'r')
-fout = open('A.out', 'w')
 fin.close()
 fout.close()
