@@ -23,43 +23,37 @@ int main() {
     //ios_base::sync_with_stdio(false);
     //cin.tie(NULL);
 
-    long long NC;
-    scanf("%lld", &NC);
+    int N;
+    vector<int> nums;
 
-    vector<int>C(NC+1);
-    string term;
-    int a,b;
-    int s;
-
-    for (int i = 0; i <= NC; i++)
-        C[i] = i;
-
-    while(cin >> term)
-    {
-        if (term == "union")
-        {
-            scanf("%d %d",&a,&b);
-            merge(C, a, b);
-        }
-        else if (term == "get")   // "get"
-        {
-            scanf("%d",&s);
-            s = find(C,s);
-            int m_min = 300005, m_max = 0, size = 0;
-            for (int i = 0; i < NC+1; i++)
-            {
-                if (find(C,i) == s)
-                {
-                    m_min = min(m_min, i);
-                    m_max = max(m_max, i);
-                    size++;
-                }
-            }
-            printf("%d %d %d\n", m_min, m_max, size);
-        }
-        else if (cin.eof())
-            break;
-    }
+    scanf("")
 
     return 0;
 }
+
+
+
+class Solution {
+public:
+    int smallestDistancePair(vector<int>& nums, int k) {
+        map<int, int> diffs;
+        N = len(nums);
+        for (int i = 0; i < N; i++)
+            for (int j = i+1; j < N; j++)
+            {
+                int d = abs(nums[j]-nums[i]);
+                if (diffs.count(d) > 0)
+                    diffs[d] += 1;
+                else
+                    diffs[d] = 1;
+            }
+
+        for(map<int, int>::iterator iter = diffs.begin(); iter != diffs.end(); ++iter)
+        {
+            k -= iter->second;
+            if (k <= 0)
+                return iter->first;
+        }
+
+    }
+};

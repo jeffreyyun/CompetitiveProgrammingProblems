@@ -1,4 +1,3 @@
-
 class Solution:
     def findLength(self, A, B):
         """
@@ -34,14 +33,3 @@ class Solution:
 def printGrid(grid):
     for r in grid:
         print(r)
-
-
-
-sol = Solution()
-A= [1,0,0,1,0,0,1,0,0,1]
-B= [0,1,1,0,1,1,0,0,0,1]
-
-ans = sol.findLength(A,B)
-
-print(ans)
-

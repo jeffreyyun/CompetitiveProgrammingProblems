@@ -6,3 +6,5 @@ new.py
 *.out
 */*.in
 */*.out
+ICPC_Notes/*.py
+ICPC_Notes/*.cpp
