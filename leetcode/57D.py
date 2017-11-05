@@ -1,14 +1,3 @@
-
-import sys
-# FNAME="A"
-# fin, fout = open(FNAME + ".in", "r"), open(FNAME + ".out", "w")
-# sys.stdin = fin
-# #sys.stdout = fout
-
-import copy
-
-
-
 class Solution:
     def candyCrush(self, board):
         """
@@ -86,19 +75,7 @@ class Solution:
                         for r3 in range(0, diff):
                             grid[r3][c] = 0
 
-            printGrid(grid)
+            #printGrid(grid)
             board = grid
 
         return board
-
-
-
-
-
-
-sol = Solution()
-inp = [[2,5,5,3,5],[5,4,5,2,3],[2,2,4,5,4],[2,4,4,4,5],[5,2,3,3,5]]
-ans = sol.candyCrush(inp)
-
-print(ans)
-
