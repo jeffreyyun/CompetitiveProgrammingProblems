@@ -39,11 +39,6 @@ void err(vector<string>::iterator it, T a, Args... args) {
     err(++it, args...);
 }
 
-inline void OPEN (string s) {
-    freopen ((s + ".in").c_str (), "r", stdin);
-    freopen ((s + ".out").c_str (), "w", stdout);
-}
-
 inline void CLOSE () {
     fclose(stdin);
     fclose(stdout);
@@ -51,8 +46,16 @@ inline void CLOSE () {
 
 // =========== END OF TEMPLATE ==============
 
+inline void OPEN (string s) {
+    freopen ((s + ".in").c_str (), "r", stdin);
+    freopen ((s + ".out").c_str (), "w", stdout);
+}
+
 int main()
 {
+    string FNAME = "";
+    OPEN(FNAME);
+
     // faster I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -62,7 +65,6 @@ int main()
     while (TC--)    // do for each test case
     {
         scanf("%d %d", &a, &b);
-
 
         printf("%d\n", someIntResult);
 
