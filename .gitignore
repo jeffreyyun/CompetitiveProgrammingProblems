@@ -6,5 +6,8 @@ new.py
 *.out
 */*.in
 */*.out
+*.png
+*/*~
+*~
 ICPC_Notes/*.py
 ICPC_Notes/*.cpp
