@@ -1,4 +1,5 @@
-# After the Contest:
+# After the Contest: Looking at leaderboard
+# Of course, we can use hash tables in this case!
 
 
 class WordFilter:
