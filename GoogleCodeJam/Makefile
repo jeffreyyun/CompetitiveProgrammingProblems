@@ -10,7 +10,7 @@
 # Example: make script="a.py"
 default:
 	make run;
-	# make watch --silent;
+	make watch --silent;
 
 watch:
 	while true; do \
@@ -20,9 +20,8 @@ watch:
 	done
 
 run:
-	g++ $(script); ./a.out;
-	#autopep8 $(script) --select=E1 --in-place;	# to fix indentation
-	#python3 $(script);
+	# g++ $(script); ./a.out;
+	python3 $(script);
 
 push:
 	git add .
