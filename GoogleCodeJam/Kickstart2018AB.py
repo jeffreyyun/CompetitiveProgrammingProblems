@@ -1,17 +1,22 @@
 def solve(N, K, V):
+    """
+    DP
+    Time: O(N log N + K log N)
+    Space: O(N + K)
+    """
     import bisect
     # preprocessing -- reverse sort
-    V.sort()
+    V.sort()                        # O(N log N)
     if V[0] == V[-1]:
         return V[0] # all the same
     rollingSums = V[:] + [0]
-    for i in range(N-1, -1, -1):
+    for i in range(N-1, -1, -1):    # O(N)
         rollingSums[i] += rollingSums[i+1]
 
     EV = [0 for i in range(K + 1)]
     EV[0] = rollingSums[0]/N
-    for i in range(1, K + 1):
-        ind = bisect.bisect(V, EV[i-1])
+    for i in range(1, K + 1):      # O(K)
+        ind = bisect.bisect(V, EV[i-1]) # O(log(N))
         numsLarger = N - ind
         sumLarger = rollingSums[ind]
         mult = (numsLarger / N)     # get the prize now
