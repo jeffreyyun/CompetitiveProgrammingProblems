@@ -1,5 +1,6 @@
 def solve(words, S1, S2, N, A, B, C, D):
     """
+    Make hash table for each substring and compare against the words (as keys)
     Time: O(M + N * sqrt(M))
     Space: O(L)
     """
@@ -10,7 +11,7 @@ def solve(words, S1, S2, N, A, B, C, D):
         x[i] = (A * x[i - 1] + B * x[i - 2] + C) % D
     S = S1 + S2 + ''.join([chr(97 + x[i] % 26) for i in range(2, N)])
 
-    # chunk words by (first, last, freq table)
+    # chunk words by the keys (first, last, freq table)
     temp = words
     words = dict()
     word_lengths = set()
@@ -25,7 +26,7 @@ def solve(words, S1, S2, N, A, B, C, D):
 
     count = 0
     for k in word_lengths: # O(# distinct word lengths) = O(sqrt(M))
-        # Keep track of freq in S
+        # Keep track of char-freq in S in ht
         htS = [0] * 26
         for c in S[:k]:
             htS[ord(c) - 97] += 1
@@ -33,9 +34,9 @@ def solve(words, S1, S2, N, A, B, C, D):
         if key in words:
             count += words[key]
             del words[key]
-        # Iterate through S
+        # Iterate through S and update ht of substring
         for i in range(k, N):  # O(N)
-            htS[ord(S[i])-97] += 1
+            htS[ord(S[i]) - 97] += 1
             htS[ord(S[i - k]) - 97] -= 1
             key = (S[i-k+1], S[i], tuple(htS))
             # print("{} {}\n{} {}\n\n".format(S[i-k+1:i+1], htS, w, ht))
