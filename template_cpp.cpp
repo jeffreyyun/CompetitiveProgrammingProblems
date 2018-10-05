@@ -10,7 +10,10 @@
 #include <set>
 #include <map>
 #include <queue>
+#include <deque>
 #include <string>
+#include <cassert>
+#include <fstream>
 #define PB push_back
 #define MP make_pair
 #define sz(v) (ll((v).size()))
@@ -71,19 +74,19 @@ int main()
 {
     string FNAME = "";
     OPEN(FNAME);
-
+    
     // faster I/O
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
+    
     int TC, a, b;
     scanf("%d", &q);
     while (TC--)    // do for each test case
     {
         scanf("%d %d", &a, &b);
-
+        
         printf("%d\n", someIntResult);
-
+        
     }
 }
 
