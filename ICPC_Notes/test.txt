@@ -1,7 +1,0 @@
-3 3
-a
-ab
-bac
-bb
-ba
-c

@@ -21,6 +21,7 @@ watch:
 
 run: $(script)
 	g++ -std=c++11 $(script) -o ./A.out; ./A.out;
+	@#autopep8 $(script) --select=E1 --in-place;	# to fix indentation
 	@#python3 $(script);
 
 push:
