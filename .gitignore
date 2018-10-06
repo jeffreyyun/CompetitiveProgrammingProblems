@@ -9,5 +9,3 @@ new.py
 *.png
 */*~
 *~
-ICPC_Notes/*.py
-ICPC_Notes/*.cpp

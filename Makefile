@@ -7,10 +7,10 @@
 # Written by Jennie Zheng. Modified by Haoyu Yun. \
 # Modified: 2017 Sep 23
 
-# Example: make script="a.py"
+# Example: make script="A.py"
 default:
-	make run;
-	make watch --silent;
+	@make run;
+	@#make watch --silent;
 
 watch:
 	while true; do \
@@ -19,9 +19,9 @@ watch:
 		inotifywait -qe modify $(script) >> /dev/null; \
 	done
 
-run:
-	g++ $(script); ./a.out;
-	#python3 $(script);
+run: $(script)
+	g++ -std=c++11 $(script) -o ./A.out; ./A.out;
+	@#python3 $(script);
 
 push:
 	git add .
