@@ -9,3 +9,7 @@ new.py
 *.png
 */*~
 *~
+*.DS\_Store
+*/*.DS\_Store
+*/*/*.DS\_Store
+*/*/*/*.DS\_Store

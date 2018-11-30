@@ -77,20 +77,22 @@ inline void OPEN (string s) {
 int main()
 {
     FASTER_IO;
-    string FNAME = "";
+    // string FNAME = "";
     // OPEN(FNAME);
+
+    int N;
+    scanf("%d", &N);
     
-    int TC, a, b;
-    scanf("%d", &TC);
-    while (TC--)    // do for each test case
+    // cout << N << ' ' << M << endl;
+    forn(i, N)
     {
-        scanf("%d %d", &a, &b);
-        error(a, b);
-        
-        int result = a + b;
-        printf("%d\n", result);
-        
+        if (i == 0) 
+        // Make a queue, add (start, turns, None) to it
+        // cout << row << ' ' << i << endl;
+        grid.push_back(row);
     }
+    result = solve(grid, N, M);
+    printf("%d\n", result);
 }
 
 #elif METHOD == 1
