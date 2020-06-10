@@ -1,15 +1,12 @@
 # .gitignore file
 
-_cpp/temp*
-new.py
 *.in
 *.out
 */*.in
 */*.out
 *.png
-*/*~
 *~
 *.DS\_Store
-*/*.DS\_Store
-*/*/*.DS\_Store
-*/*/*/*.DS\_Store
+.vscode
+tmp
+ignore_dir

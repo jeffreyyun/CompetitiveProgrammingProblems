@@ -4,12 +4,12 @@
 
 # Requires inotifywait, part of inotify-tools (Debian/Ubuntu: apt-get install inotify-tools)
 
-# Written by Jennie Zheng. Modified by Haoyu Yun. \
-# Modified: 2017 Sep 23
+# Written by Jennie Zheng and Haoyu Yun. \
+# Modified: 2020 Jun 10
 
-# Example: make script="A.py"
+# Example: make script="tmp/A.py"
 default:
-	@make run;
+	make run;
 	@#make watch --silent;
 
 watch:
@@ -20,9 +20,14 @@ watch:
 	done
 
 run: $(script)
-	g++ -std=c++11 $(script) -o ./A.out; ./A.out;
-	@#autopep8 $(script) --select=E1 --in-place;	# to fix indentation
-	@#python3 $(script);
+	python3 $(script);
+	@# ifeq ($(findstring cpp, $(script)),)
+	@# 	g++ -std=c++11 $(script) -o ./A.out; ./A.out;
+	@# endif
+	@# ifeq ($(findstring py, $(script)),)
+	@# 	autopep8 $(script) --select=E1 --in-place;	# to fix indentation
+	@# 	python3 $(script);
+	@# endif
 
 push:
 	git add .
@@ -30,4 +35,4 @@ push:
 	read msg; \
 	echo "git commit -am" $$msg; \
 	git commit -am "$$msg";
-	git push origin master
+	#git push origin master

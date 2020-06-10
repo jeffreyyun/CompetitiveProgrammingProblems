@@ -5,7 +5,8 @@ import queue
 import collections
 from collections import Counter
 
-fin, fout = open(FNAME + ".in", "r"), open(FNAME + ".out", "w")
+FILENAME = None
+fin, fout = open(f"{FILENAME}.in", "r"), open(f"{FILENAME}.out", "w")
 sys.stdin = fin
 sys.stdout = fout
 
